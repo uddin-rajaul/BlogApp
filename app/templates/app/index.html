@@ -70,7 +70,9 @@
             <div class="card">
               <div class="post-img">
                 <img src="{{post.image.url}}" alt="" />
-                <div class="tag">Tag name</div>
+                {% for tag in post.tags.all %}
+                      <div class="tag">{{tag.name}}</div>
+                {% endfor %}
               </div>
               <div class="card-content">
                 <h3>
@@ -109,7 +111,9 @@
             <div class="card">
               <div class="post-img">
                 <img src="{{post.image.url}}" alt="" />
-                <div class="tag">Tag name</div>
+                {% for tag in post.tags.all %}
+                      <div class="tag">{{tag.name}}</div>
+                {% endfor %}
               </div>
               <div class="card-content">
                 <h3>
